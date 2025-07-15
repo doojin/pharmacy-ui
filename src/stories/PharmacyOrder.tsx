@@ -1,13 +1,15 @@
 
-import { Badge, Card, Tabs } from "@chakra-ui/react"
-import { FaInfo } from "react-icons/fa"
-import { LuClipboardList, LuCloudDownload, LuFileDown, LuInfo, LuMessageSquareText, LuPackage } from "react-icons/lu"
-import { Md3dRotation, MdOutlineDescription } from "react-icons/md"
+import { Alert, Badge, Card, Tabs } from "@chakra-ui/react"
+import { LuClipboardList, LuCloudDownload, LuMessageSquareText, LuPackage } from "react-icons/lu"
 
 export const TestComponent = () => {
   return (
     <Card.Root>
       <Card.Body>
+        <Alert.Root status="info" style={{ marginBottom: '10px' }}>
+          <Alert.Indicator />
+          <Alert.Title>Ваш заказ был отправлен на обработку поставщику</Alert.Title>
+        </Alert.Root>
         <Tabs.Root variant="enclosed" defaultValue="order-list">
           <Tabs.List>
             <Tabs.Trigger value="description">
