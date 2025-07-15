@@ -1,8 +1,12 @@
 
-import { Button } from "@chakra-ui/react"
+import { Card } from "@chakra-ui/react"
 
 export const TestComponent = () => {
   return (
-    <Button>Test</Button>
+    <Card.Root>
+      <Card.Body>
+        test
+      </Card.Body>
+    </Card.Root>
   )
 }
