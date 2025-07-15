@@ -22,7 +22,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <ChakraProvider value={defaultSystem}>
-        <Theme colorPalette="green">
+        <Theme colorPalette="gray">
           <Story />
         </Theme>
       </ChakraProvider>
