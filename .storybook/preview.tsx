@@ -7,6 +7,11 @@ import "@fontsource/inter/700.css";
 
 const preview: Preview = {
   parameters: {
+    previewTabs: {
+      'storybook/docs/panel': {
+        hidden: true,
+      },
+    },
     controls: {
       matchers: {
        color: /(background|color)$/i,
