@@ -1,11 +1,13 @@
 
-import { Alert, Badge, Card, Tabs, Image, Table, Flex, Text, Checkbox, ActionBar, Portal, Button, Input } from "@chakra-ui/react"
-import { LuClipboardList, LuCloudDownload, LuMessageSquareText, LuPackage, LuTrash2 } from "react-icons/lu"
+import { Alert, Badge, Card, Tabs, Image, Table, Flex, Text, Checkbox, ActionBar, Portal, Button, Input, Stack, Icon, Separator, FileUpload, Fieldset, Field } from "@chakra-ui/react"
+import { LuCalendar, LuClipboardList, LuCloudDownload, LuMessageSquareText, LuPackage, LuTrash2 } from "react-icons/lu"
 import productPhoto1 from "../assets/products/p1.webp"
 import productPhoto2 from "../assets/products/p2.webp"
 import productPhoto3 from "../assets/products/p3.webp"
 import productPhoto4 from "../assets/products/p4.webp"
+import pdfIcon from "../assets/pdf.jpg"
 import { useState } from "react"
+import { HiUpload } from "react-icons/hi"
 
 export const TestComponent = () => {
   const [selection, setSelection] = useState<string[]>([])
@@ -39,6 +41,21 @@ export const TestComponent = () => {
       photo: productPhoto4,
       price: 40.99,
       count: 50
+    }
+  ];
+
+  const files = [
+    { 
+      title: 'Контракт с поставщиком',
+      filename: 'contract.pdf',
+      uploaded: "11.07.2025",
+      modified: "12.07.2025"
+    },
+    { 
+      title: 'Общие рекомендации',
+      filename: 'recommendations.pdf',
+      uploaded: "09.07.2025",
+      modified: "10.07.2025"
     }
   ];
 
@@ -174,6 +191,63 @@ export const TestComponent = () => {
               </ActionBar.Positioner>
             </Portal>
           </ActionBar.Root>
+          </Tabs.Content>
+          <Tabs.Content value="files">
+            <Stack direction="row">
+              { 
+                files.map(file => (
+                  <Card.Root width="320px">
+                    <Card.Body>
+                      <Flex direction="column">
+                        <Flex gap={4} align="center">
+                          <Image src={pdfIcon} boxSize="50px" fit="contain" />
+                          <Flex direction="column">
+                            <Flex style={{ color: 'gray', fontSize: '.75rem' }} align="center">
+                          <Icon style={{ marginRight: ".2rem" }}><LuCalendar/></Icon>
+                          <Text>{ file.uploaded }</Text>
+                        </Flex>
+                            <Text>{ file.title }</Text>
+                            <Text color="gray" fontSize=".85rem">{ file.filename }</Text>
+                          </Flex>
+                        </Flex>
+                        <Flex style={{ marginTop: "1rem" }}>
+                          <Flex gap={1}>
+                            <Button size="xs" variant="outline" colorPalette="blue"><LuCloudDownload /> Скачать</Button>
+                            <Button size="xs" variant="outline" colorPalette="red"><LuTrash2 /> Удалить</Button>
+                          </Flex>
+                        </Flex>
+                      </Flex>
+                    </Card.Body>
+                  </Card.Root>
+                )) 
+              }
+            </Stack>
+            <Separator marginTop="1rem" marginBottom="1rem" />
+            <Fieldset.Root size="lg" maxW="md">
+              <Stack>
+                <Fieldset.Legend>Загрузить новый файл</Fieldset.Legend>
+                <Alert.Root status="warning" style={{ marginBottom: '10px' }}>
+                  <Alert.Indicator />
+                  <Alert.Title>Внимание! Загружая новый файл вы предоставляете доступ к нему вашему поставщику.</Alert.Title>
+                </Alert.Root>
+              </Stack>
+
+              <Fieldset.Content>
+                <Field.Root>
+                  <Field.Label>Название файла</Field.Label>
+                  <Input name="name" placeholder="Заголовок" />
+                </Field.Root>
+              </Fieldset.Content>
+
+              <FileUpload.Root>
+                <FileUpload.HiddenInput />
+                <FileUpload.Trigger asChild>
+                  <Button size="sm" colorPalette="teal">
+                    <HiUpload /> Выбрать файл
+                  </Button>
+                </FileUpload.Trigger>
+              </FileUpload.Root>
+            </Fieldset.Root>
           </Tabs.Content>
         </Tabs.Root>
       </Card.Body>
