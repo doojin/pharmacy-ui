@@ -10,7 +10,6 @@ const MantineDemo = () => {
         screen2,
         screen3,
         screen4,
-        screen5,
     ]}/>
 };
 
