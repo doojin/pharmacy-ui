@@ -7,7 +7,7 @@ import screen5 from "../assets/screens/ant/5.png";
 import screen6 from "../assets/screens/ant/6.png";
 import screen7 from "../assets/screens/ant/7.png";
 
-const ChakraDemo = () => {
+const AntDemo = () => {
     return <Demo screenshots={[
         screen1,
         screen2,
@@ -19,4 +19,4 @@ const ChakraDemo = () => {
     ]}/>
 };
 
-export default ChakraDemo;
+export default AntDemo;
