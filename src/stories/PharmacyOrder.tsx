@@ -1,5 +1,5 @@
 
-import { Alert, Badge, Card, Tabs, Image, Table, Flex, Text, Checkbox, ActionBar, Portal, Button, Input, Stack, Icon, Separator, FileUpload, Fieldset, Field, Timeline, Avatar, Span, RadioGroup, HStack, Textarea } from "@chakra-ui/react"
+import { Alert, Badge, Card, Tabs, Image, Table, Flex, Text, Checkbox, ActionBar, Portal, Button, Input, Stack, Icon, Separator, FileUpload, Fieldset, Field, Timeline, Avatar, Span, RadioGroup, HStack, Textarea, Switch } from "@chakra-ui/react"
 import { LuCalendar, LuCheckCheck, LuClipboardList, LuCloudDownload, LuEye, LuMessageSquareText, LuPackage, LuPencil, LuTrash2 } from "react-icons/lu"
 import productPhoto1 from "../assets/products/p1.webp"
 import productPhoto2 from "../assets/products/p2.webp"
@@ -427,6 +427,13 @@ export const TestComponent = () => {
                     <Checkbox.Label>Да</Checkbox.Label>
                   </Checkbox.Root>
                   <Textarea defaultValue="Для данного заказа необходима сверхпрочная упаковка (если возможно). Спасибо." />
+                </Field.Root>
+                <Field.Root marginTop="2rem">
+                  <Switch.Root>
+                    <Switch.HiddenInput />
+                    <Switch.Control />
+                    <Switch.Label>Получать уведомления на почту</Switch.Label>
+                  </Switch.Root>
                 </Field.Root>
                 <Button marginTop="2rem" colorPalette="teal">Сохранить</Button>
               </Card.Body>
