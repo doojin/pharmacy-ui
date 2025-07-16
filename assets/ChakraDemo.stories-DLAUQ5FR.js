@@ -1,0 +1,3 @@
+import{j as s}from"./iframe-NI_TElvN.js";import{D as o}from"./Demo-BDgkoQaM.js";import"./image-C6-Y6c3f.js";const t=""+new URL("1-C8U7zes3.png",import.meta.url).href,n=""+new URL("2-CUE_PzJB.png",import.meta.url).href,a=""+new URL("3-C7F68ygD.png",import.meta.url).href,m=""+new URL("4-C-bgpVNY.png",import.meta.url).href,c=""+new URL("5-C3asf40U.png",import.meta.url).href,r=()=>s.jsx(o,{screenshots:[t,n,a,m,c]});r.__docgenInfo={description:"",methods:[],displayName:"ChakraDemo"};const f={component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...e.parameters?.docs?.source}}};const g=["Default"];export{e as Default,g as __namedExportsOrder,f as default};

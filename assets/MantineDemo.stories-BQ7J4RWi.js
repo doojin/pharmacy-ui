@@ -1,0 +1,3 @@
+import{j as t}from"./iframe-NI_TElvN.js";import{D as o}from"./Demo-BDgkoQaM.js";import"./image-C6-Y6c3f.js";const n=""+new URL("1-Cz7Mu4_L.png",import.meta.url).href,s=""+new URL("2-Bg1Qpvi2.png",import.meta.url).href,a=""+new URL("3-D47PGAEL.png",import.meta.url).href,m=""+new URL("4-D5vyJHr-.png",import.meta.url).href,r=()=>t.jsx(o,{screenshots:[n,s,a,m]});r.__docgenInfo={description:"",methods:[],displayName:"MantineDemo"};const u={component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...e.parameters?.docs?.source}}};const d=["Default"];export{e as Default,d as __namedExportsOrder,u as default};
