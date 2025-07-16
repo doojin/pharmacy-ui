@@ -1,5 +1,5 @@
 
-import { Alert, Badge, Card, Tabs, Image, Table, Flex, Text, Checkbox, ActionBar, Portal, Button, Input, Stack, Icon, Separator, FileUpload, Fieldset, Field, Timeline, Avatar, Span } from "@chakra-ui/react"
+import { Alert, Badge, Card, Tabs, Image, Table, Flex, Text, Checkbox, ActionBar, Portal, Button, Input, Stack, Icon, Separator, FileUpload, Fieldset, Field, Timeline, Avatar, Span, RadioGroup, HStack, Textarea } from "@chakra-ui/react"
 import { LuCalendar, LuCheckCheck, LuClipboardList, LuCloudDownload, LuEye, LuMessageSquareText, LuPackage, LuPencil, LuTrash2 } from "react-icons/lu"
 import productPhoto1 from "../assets/products/p1.webp"
 import productPhoto2 from "../assets/products/p2.webp"
@@ -68,7 +68,7 @@ export const TestComponent = () => {
       <Card.Body>
         <Alert.Root status="info" style={{ marginBottom: '10px' }}>
           <Alert.Indicator />
-          <Alert.Title>Ваш заказ был отправлен на обработку поставщику</Alert.Title>
+          <Alert.Title>Данный заказ был отправлен на обработку поставщику</Alert.Title>
         </Alert.Root>
         <Tabs.Root fitted variant="enclosed" defaultValue="order-list">
           <Tabs.List>
@@ -370,6 +370,67 @@ export const TestComponent = () => {
                 </Timeline.Content>
               </Timeline.Item>
             </Timeline.Root>
+          </Tabs.Content>
+          <Tabs.Content value="description">
+            <Card.Root>
+              <Card.Body>
+                <Flex justify="space-between">
+                  <Text color="gray" fontSize=".85rem">
+                    Дата создания заказа: 
+                    <Span fontWeight="bold" marginLeft="0.5rem">
+                      <Icon verticalAlign="baseline"><LuCalendar /></Icon> 21.03.2025
+                    </Span>
+                  </Text>
+                  <Text color="gray" fontSize=".85rem">
+                    Последние изменения:
+                    <Span fontWeight="bold" marginLeft="0.5rem">
+                      <Icon verticalAlign="baseline"><LuCalendar /></Icon> 27.03.2025
+                    </Span>
+                  </Text>
+                </Flex>
+                <Field.Root marginTop="2rem">
+                  <Field.Label>
+                    Название заказа: <Span color="red" fontWeight="bold">*</Span>
+                  </Field.Label>
+                  <Input defaultValue="Заказ на партию медикаментов" />
+                </Field.Root>
+                <Field.Root marginTop="2rem">
+                  <Field.Label>
+                    Срочность заказа: <Span color="red" fontWeight="bold">*</Span>
+                  </Field.Label>
+                  <RadioGroup.Root defaultValue="2">
+                    <HStack gap="6">
+                      <RadioGroup.Item value="1">
+                        <RadioGroup.ItemHiddenInput />
+                        <RadioGroup.ItemIndicator />
+                        <RadioGroup.ItemText>Срочный</RadioGroup.ItemText>
+                      </RadioGroup.Item>
+                      <RadioGroup.Item value="2">
+                        <RadioGroup.ItemHiddenInput />
+                        <RadioGroup.ItemIndicator />
+                        <RadioGroup.ItemText>Обычный</RadioGroup.ItemText>
+                      </RadioGroup.Item>
+                    </HStack>
+                  </RadioGroup.Root>
+                </Field.Root>
+                <Field.Root marginTop="2rem">
+                  <Field.Label>
+                    Описание заказа:
+                  </Field.Label>
+                  <Textarea defaultValue="Здраствуйте, оставляем новый заказ на новую партию медикаментов. Мы изменили необходимое количество каждого продукта, в этом месяце оно увеличилось. Просьба проверить наличие каждого продукта и связаться с нами в случае необходимости. Спасибо." />
+                </Field.Root>
+                <Field.Root marginTop="2rem">
+                  <Field.Label>Добавить требования к упаковке?</Field.Label>
+                  <Checkbox.Root defaultChecked>
+                    <Checkbox.HiddenInput />
+                    <Checkbox.Control />
+                    <Checkbox.Label>Да</Checkbox.Label>
+                  </Checkbox.Root>
+                  <Textarea defaultValue="Для данного заказа необходима сверхпрочная упаковка (если возможно). Спасибо." />
+                </Field.Root>
+                <Button marginTop="2rem" colorPalette="teal">Сохранить</Button>
+              </Card.Body>
+            </Card.Root>
           </Tabs.Content>
         </Tabs.Root>
       </Card.Body>
