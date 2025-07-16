@@ -1,3 +1,0 @@
-import{j as o}from"./iframe-NI_TElvN.js";import{D as s}from"./Demo-BDgkoQaM.js";import"./image-C6-Y6c3f.js";const t=""+new URL("1-VS6ljcju.png",import.meta.url).href,n=""+new URL("2-BTDDszIb.png",import.meta.url).href,a=""+new URL("3-BJDF7g80.png",import.meta.url).href,r=()=>o.jsx(s,{screenshots:[t,n,a]});r.__docgenInfo={description:"",methods:[],displayName:"MuiDemo"};const i={component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const u=["Default"];export{e as Default,u as __namedExportsOrder,i as default};

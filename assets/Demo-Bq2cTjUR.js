@@ -1,0 +1,1 @@
+import{j as r}from"./iframe-DRv7E7SK.js";import{C as o,a as t,I as a}from"./image-y9Xgs_oN.js";const n=({screenshots:e})=>r.jsx(o,{children:r.jsx(t,{children:e.map(s=>r.jsx(a,{src:s}))})});n.__docgenInfo={description:"",methods:[],displayName:"Demo",props:{screenshots:{required:!0,tsType:{name:"Array",elements:[{name:"string"}],raw:"string[]"},description:""}}};export{n as D};
