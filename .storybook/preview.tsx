@@ -7,12 +7,16 @@ import "@fontsource/inter/700.css";
 
 const preview: Preview = {
   parameters: {
+    options: {
+      showPanel: false
+    },
     previewTabs: {
       'storybook/docs/panel': {
         hidden: true,
       },
     },
     controls: {
+      disabled: true,
       matchers: {
        color: /(background|color)$/i,
        date: /Date$/i,

@@ -4,7 +4,6 @@ import ChakraDemo from './ChakraDemo';
 
 const meta = {
   component: ChakraDemo,
-  title: "Пример компонентов: Chakra"
 } satisfies Meta<typeof ChakraDemo>;
 
 export default meta;
