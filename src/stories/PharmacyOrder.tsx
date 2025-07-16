@@ -169,10 +169,7 @@ export const TestComponent = () => {
               <div>
                 Общая сумма заказа: 
                 <Text display="inline" fontWeight="bold" style={{ marginLeft: 5 }}>
-                  €{ products.map(product => product.price).reduce((sum, curr) => {
-                  sum += curr
-                  return sum
-                }, 0).toFixed(2) }
+                  €67,997.50
                 </Text>
               </div>
             </Flex>
