@@ -1,11 +1,13 @@
 
-import { Alert, Badge, Card, Tabs, Image, Table, Flex, Text, Checkbox, ActionBar, Portal, Button, Input, Stack, Icon, Separator, FileUpload, Fieldset, Field } from "@chakra-ui/react"
-import { LuCalendar, LuClipboardList, LuCloudDownload, LuMessageSquareText, LuPackage, LuTrash2 } from "react-icons/lu"
+import { Alert, Badge, Card, Tabs, Image, Table, Flex, Text, Checkbox, ActionBar, Portal, Button, Input, Stack, Icon, Separator, FileUpload, Fieldset, Field, Timeline, Avatar, Span } from "@chakra-ui/react"
+import { LuCalendar, LuCheckCheck, LuClipboardList, LuCloudDownload, LuEye, LuMessageSquareText, LuPackage, LuPencil, LuTrash2 } from "react-icons/lu"
 import productPhoto1 from "../assets/products/p1.webp"
 import productPhoto2 from "../assets/products/p2.webp"
 import productPhoto3 from "../assets/products/p3.webp"
 import productPhoto4 from "../assets/products/p4.webp"
 import pdfIcon from "../assets/pdf.jpg"
+import avatar1 from "../assets/avatar1.jpeg"
+import avatar2 from "../assets/avatar2.jpeg"
 import { useState } from "react"
 import { HiUpload } from "react-icons/hi"
 
@@ -248,6 +250,126 @@ export const TestComponent = () => {
                 </FileUpload.Trigger>
               </FileUpload.Root>
             </Fieldset.Root>
+          </Tabs.Content>
+          <Tabs.Content value="response">
+            <Timeline.Root size="lg" variant="subtle">
+              <Timeline.Item>
+                <Timeline.Connector>
+                  <Timeline.Separator />
+                  <Timeline.Indicator bg="teal.solid" color="teal.contrast">
+                    <LuCheckCheck />
+                  </Timeline.Indicator>
+                </Timeline.Connector>
+                <Timeline.Content>
+                  <Timeline.Title>
+                    <Text>Заказ был загружен в систему</Text>
+                  </Timeline.Title>
+                  <Timeline.Description>
+                    8 дней назад
+                  </Timeline.Description>
+                  <Text fontSize=".9rem">
+                    Ваш поставщик проверит заказ и свяжется с вами
+                  </Text>
+                </Timeline.Content>
+              </Timeline.Item>
+
+              <Timeline.Item>
+                <Timeline.Connector>
+                  <Timeline.Separator />
+                  <Timeline.Indicator bg="teal.solid" color="teal.contrast">
+                    <LuEye />
+                  </Timeline.Indicator>
+                </Timeline.Connector>
+                <Timeline.Content>
+                  <Timeline.Title>
+                    <Avatar.Root size="2xs">
+                      <Avatar.Image src={avatar1} />
+                    </Avatar.Root>
+                    Эрика <Badge>поставщик</Badge> 
+                    <Span color="fg.muted">проверил(а)</Span> ваш заказ
+                  </Timeline.Title>
+                  <Timeline.Description>
+                    6 дней назад
+                  </Timeline.Description>
+                </Timeline.Content>
+              </Timeline.Item>
+
+              <Timeline.Item>
+                <Timeline.Connector>
+                  <Timeline.Separator />
+                  <Timeline.Indicator bg="teal.solid" color="teal.contrast">
+                    <Icon fontSize="xs">
+                      <LuPencil />
+                    </Icon>
+                  </Timeline.Indicator>
+                </Timeline.Connector>
+                <Timeline.Content gap="4">
+                  <Timeline.Title>
+                    <Avatar.Root size="2xs">
+                      <Avatar.Image src={avatar1} />
+                      <Avatar.Fallback />
+                    </Avatar.Root>
+                    Эрика <Badge>поставщик</Badge>  <Span color="fg.muted">оставила сообщение:</Span>
+                  </Timeline.Title>
+                  <Timeline.Description>
+                    3 дня назад
+                  </Timeline.Description>
+                  <Card.Root size="sm">
+                    <Card.Body textStyle="sm" lineHeight="tall">
+                      Добрый день! Заказ получен. Проверяю. Если будут необходима дополнительная информация, я с вами свяжусь.
+                    </Card.Body>
+                    <Card.Footer>
+                      <Button size="xs" variant="surface" rounded="md">
+                        👏 1
+                      </Button>
+                    </Card.Footer>
+                  </Card.Root>
+                </Timeline.Content>
+              </Timeline.Item>
+
+              <Timeline.Item>
+                <Timeline.Connector>
+                  <Timeline.Separator />
+                  <Timeline.Indicator bg="teal.solid" color="teal.contrast">
+                    <Icon fontSize="xs">
+                      <LuPencil />
+                    </Icon>
+                  </Timeline.Indicator>
+                </Timeline.Connector>
+                <Timeline.Content gap="4">
+                  <Timeline.Title>
+                    <Avatar.Root size="2xs">
+                      <Avatar.Image src={avatar1} />
+                      <Avatar.Fallback />
+                    </Avatar.Root>
+                    Эрика <Badge>поставщик</Badge> <Span color="fg.muted">оставила сообщение:</Span>
+                  </Timeline.Title>
+                  <Timeline.Description>
+                    3 дня назад
+                  </Timeline.Description>
+                  <Card.Root size="sm">
+                    <Card.Body textStyle="sm" lineHeight="tall">
+                      Всё в порядке. Заказ будет отправлен в течении нескольких рабочих дней!
+                    </Card.Body>
+                  </Card.Root>
+                </Timeline.Content>
+              </Timeline.Item>
+
+              <Timeline.Item>
+                <Timeline.Connector>
+                  <Timeline.Separator />
+                  <Timeline.Indicator>
+                    <Avatar.Root size="full">
+                      <Avatar.Image src={avatar2} />
+                      <Avatar.Fallback />
+                    </Avatar.Root>
+                  </Timeline.Indicator>
+                </Timeline.Connector>
+                <Timeline.Content gap="4" mt="-1" w="full">
+                  <Input size="sm" placeholder="Написать сообщение" />
+                </Timeline.Content>
+              </Timeline.Item>
+            </Timeline.Root>
           </Tabs.Content>
         </Tabs.Root>
       </Card.Body>
